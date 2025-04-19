@@ -146,8 +146,8 @@ impl Pretty {
             Level::TRACE => Style::new().fg(Color::Purple),
             Level::DEBUG => Style::new().fg(Color::LightGray),
             Level::INFO => Style::new().fg(Color::White),
-            Level::WARN => Style::new().fg(Color::Yellow),
-            Level::ERROR => Style::new().fg(Color::Red),
+            Level::WARN => Style::new().fg(Color::Yellow).bold(),
+            Level::ERROR => Style::new().fg(Color::Red).bold(),
         }
     }
 
