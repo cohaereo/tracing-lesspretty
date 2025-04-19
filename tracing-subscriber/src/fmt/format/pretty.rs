@@ -144,8 +144,8 @@ impl Pretty {
     fn style_for(level: &Level) -> Style {
         match *level {
             Level::TRACE => Style::new().fg(Color::Purple),
-            Level::DEBUG => Style::new().fg(Color::Blue),
-            Level::INFO => Style::new().fg(Color::Green),
+            Level::DEBUG => Style::new().fg(Color::LightGray),
+            Level::INFO => Style::new().fg(Color::White),
             Level::WARN => Style::new().fg(Color::Yellow),
             Level::ERROR => Style::new().fg(Color::Red),
         }
@@ -318,7 +318,7 @@ where
             writer.write_char('\n')?;
         }
 
-        writer.write_char('\n')
+        Ok(())
     }
 }
 
